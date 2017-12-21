@@ -6,7 +6,7 @@
             <delete file="HelloWorld.exe" failonerror="false" />
             <delete file="HelloWorld.pdb" failonerror="false" />
         </target>
-        <target name="compile">
+        <target name="build">
        <msbuild project="JenkinsfileLab.sln">
               <arg value="/property:Configuration=release" />                                  
               <arg value="/t:Rebuild" />
