@@ -6,11 +6,4 @@
             <delete file="HelloWorld.exe" failonerror="false" />
             <delete file="HelloWorld.pdb" failonerror="false" />
         </target>
-        <target name="build" description="compiles the source code">
-            <csc target="exe" output="HelloWorld.exe" debug="${debug}">
-                <sources>
-                    <includes name="HelloWorld.cs" />
-                </sources>
-            </csc>
-        </target>
     </project>
