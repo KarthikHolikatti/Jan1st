@@ -7,10 +7,5 @@
             <delete file="HelloWorld.pdb" failonerror="false" />
         </target>
         <target name="build" description="compiles the source code">
-            <csc target="sln" output="JenkinsfileLab.sln" debug="${debug}">
-                <sources>
-                    <includes name="JenkinsfileLab.sln" />
-                </sources>
-            </csc>
         </target>
     </project>
