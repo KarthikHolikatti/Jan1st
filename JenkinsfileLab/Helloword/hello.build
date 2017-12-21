@@ -1,15 +1,9 @@
-<?xml version="1.0"?>
-    <project name="Hello World" default="build" basedir=".">
-        <description>The Hello World of build files.</description>
-        <property name="debug" value="true" overwrite="false" />
-        <target name="clean" description="remove all generated files">
-            <delete file="HelloWorld.exe" failonerror="false" />
-            <delete file="HelloWorld.pdb" failonerror="false" />
-        </target>
-        <target name="build">
-       <msbuild project="JenkinsfileLab.sln">
-              <arg value="/property:Configuration=release" />                                  
-              <arg value="/t:Rebuild" />
-       </msbuild>
-</target>
-    </project>
+    <?xml version="1.0" encoding="utf-8" ?>
+<project name="JenkinsfileLab">
+
+   <target name="build">
+      <solution configuration="debug"
+                solutionfile="JenkinsfileLab.sln" />
+   </target>
+
+</project>
