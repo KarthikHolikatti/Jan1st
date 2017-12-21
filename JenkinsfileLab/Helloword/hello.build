@@ -6,4 +6,6 @@
             <delete file="HelloWorld.exe" failonerror="false" />
             <delete file="HelloWorld.pdb" failonerror="false" />
         </target>
+            <target name="build" description="compiles the source code">
+        </target>
     </project>
