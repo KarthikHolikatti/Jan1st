@@ -30,10 +30,10 @@
          </assemblyfolders>
       </solution>
    </target>
-   <if test="${not file::exists(src.dir\filename) or file::get-length(src.dir\filename) == 0}">
+   <if test="${not file::exists ${src.dir\filename} or file::get-length ${src.dir\filename} == 0}">
     <echo message="The version file ${filename} doesn't exist or is empty!" />
 </if>
-<if test="${file::exists(src.dir\filename)}">
+<if test="${file::exists${src.dir\filename}}">
     <echo>Build release configuration</echo>
      <echo>not Build release configuration</echo>
      </if>
