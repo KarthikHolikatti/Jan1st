@@ -38,7 +38,7 @@
     <echo>Build release configuration</echo>
      <echo>not Build release configuration</echo>
      </if>
-     <if test="${file::exists (src.dir)\(filename)}">
+     <if test="${file::exists '(src.dir)\(filename)'}">
     <echo>Build release configuration</echo>
      <echo>not Build release configuration</echo>
      </if>
