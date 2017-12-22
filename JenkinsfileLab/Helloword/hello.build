@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="JenkinsfileLab">
    <target name="builds"> 
-   <if test="${not file::exists(JenkinsfileLab.sln) or file::get-length(JenkinsfileLab.sln) = 0}">   
     <echo>Build release configuration</echo>
-   </if> 
-   <unless>
      <echo>not Build release configuration</echo>
-   </unless>
     <solution configuration="release">
     <excludeprojects>
         <include name="JenkinsfileLab.sln" />
