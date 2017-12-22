@@ -19,7 +19,7 @@
    <property name="build.server.dir" value="..." />
    <property name="3rd.party.lib.dir" value="..." />
 
-   <target name="build
+   <target name="build">
       <solution solutionfile="${src.dir}\JenkinsfileLab.sln"
           configuration="${solution.config}"
           outputdir="${build.dir}">
