@@ -29,7 +29,9 @@
          </assemblyfolders>
       </solution>
    </target>
-   
+   <if test="${not file::exists(JenkinsfileLab.sln) or file::get-length(JenkinsfileLab.sln) = 0}">
+    <echo message="The version file JenkinsfileLab.sln doesn't exist or is empty!" />
+</if>
     <echo>Build release configuration</echo>
      <echo>not Build release configuration</echo>
 </project>
