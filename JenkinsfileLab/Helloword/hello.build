@@ -36,5 +36,5 @@
 <ifnot>
     <echo>Build release configuration</echo>
      <echo>not Build release configuration</echo>
-     </if>
+     </ifnot>
 </project>
