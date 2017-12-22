@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="JenkinsfileLab">
-   <target name="build">
-      <solution configuration="debug"
-                solutionfile="JenkinsfileLab.sln" />
+   <target name="build"> 
+   <if test="${not file::exists(JenkinsfileLab.sln) or file::get-length(JenkinsfileLab.sln) = 0}">
+    <echo message="The version file JenkinsfileLab.sln doesn't exist or is empty!" />
+   </if> 
+   <unless>
+   <echo message="file exists"/>
+   </unless>
+    <solution configuration="release">
+    <excludeprojects>
+        <include name="JenkinsfileLab.sln" />
+    </excludeprojects>
+    </solution>   
    </target>
 </project>
