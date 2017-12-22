@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="JenkinsfileLab">
-   <target name="build"> 
+   <target name="builds"> 
    <if test="${not file::exists(JenkinsfileLab.sln) or file::get-length(JenkinsfileLab.sln) = 0}">
     <echo message="The version file JenkinsfileLab.sln doesn't exist or is empty!" />
    </if> 
@@ -12,5 +12,25 @@
         <include name="JenkinsfileLab.sln" />
     </excludeprojects>
     </solution>   
+   </target>
+   <property name="src.dir" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`" />
+   <property name="build.dir" value="bin" />
+   <property name="solution.config" value="debug" />
+   <property name="build.server.dir" value="..." />
+   <property name="3rd.party.lib.dir" value="..." />
+
+   <target name="build">
+      <solution solutionfile="${src.dir}\JenkinsfileLab.sln"
+          configuration="${solution.config}"
+          outputdir="${build.dir}">
+      <webmap>
+            <map url="http://Localhost/JenkinsfileLab.csproj"
+                 path="${src.dir}\JenkinsfileLab.csproj" />
+         </webmap>
+         <assemblyfolders>
+            <include name="${build.server.dir}" />
+            <include name="${3rd.party.lib.dir}" />
+         </assemblyfolders>
+      </solution>
    </target>
 </project>
