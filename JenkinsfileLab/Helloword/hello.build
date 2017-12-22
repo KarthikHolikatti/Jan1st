@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="JenkinsfileLab">
+try{
    <target name="builds"> 
    <if test="${not file::exists(JenkinsfileLab.sln) or file::get-length(JenkinsfileLab.sln) = 0}">
     <echo message="The version file JenkinsfileLab.sln doesn't exist or is empty!" />
@@ -19,6 +20,8 @@
    <property name="build.server.dir" value="..." />
    <property name="3rd.party.lib.dir" value="..." />
    def msg="building.........."
+   }
+   catch{
 
    <target name="build">
       <solution solutionfile="${src.dir}\JenkinsfileLab.sln"
@@ -30,9 +33,14 @@
          </webmap>
          echo msg
          <assemblyfolders>
+         def msg="building.........."
             <include name="${build.server.dir}" />
             <include name="${3rd.party.lib.dir}" />
          </assemblyfolders>
       </solution>
    </target>
+   }
+   finally{
+   echo msg
+   }
 </project>
