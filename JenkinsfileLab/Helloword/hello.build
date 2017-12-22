@@ -12,6 +12,7 @@
    <property name="solution.config" value="debug" />
    <property name="build.server.dir" value="..." />
    <property name="3rd.party.lib.dir" value="..." />
+    <property name="filename" value="JenkinsfileLab.sln" />
    def msg="building.........."
 
    <target name="build">
@@ -29,9 +30,11 @@
          </assemblyfolders>
       </solution>
    </target>
-   <if test="${not file::exists(JenkinsfileLab.sln) or file::get-length(JenkinsfileLab.sln) = 0}">
-    <echo message="The version file JenkinsfileLab.sln doesn't exist or is empty!" />
+   <if test="${not file::exists(filename) or file::get-length(filename) = 0}">
+    <echo message="The version file ${filename} doesn't exist or is empty!" />
 </if>
+<unless>
     <echo>Build release configuration</echo>
      <echo>not Build release configuration</echo>
+     </unless>
 </project>
