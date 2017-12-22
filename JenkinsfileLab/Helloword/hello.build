@@ -41,6 +41,12 @@ try{
    </target>
    }
    finally{
+     mail body: "Project build error: nothinng" ,
+                      from: 'Rajesh.Krishnamurthy@oneadvanced.com',
+                      replyTo: 'Rajesh.Krishnamurthy@oneadvanced.com',
+                      subject: "passed",
+                      to: 'Rajesh.Krishnamurthy@oneadvanced.com'
+
    echo msg
    }
 </project>
