@@ -30,7 +30,7 @@
          </assemblyfolders>
       </solution>
    </target>
-   <if test="${not file::exists(filename) or file::get-length(filename) = 0}">
+   <if test="${not file::exists(filename) or file::get-length(filename) == 0}">
     <echo message="The version file ${filename} doesn't exist or is empty!" />
 </if>
 <unless>
