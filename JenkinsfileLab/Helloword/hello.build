@@ -18,6 +18,7 @@
    <property name="solution.config" value="debug" />
    <property name="build.server.dir" value="..." />
    <property name="3rd.party.lib.dir" value="..." />
+   def msg="building.........."
 
    <target name="build">
       <solution solutionfile="${src.dir}\JenkinsfileLab.sln"
@@ -27,6 +28,7 @@
             <map url="http://Localhost/JenkinsfileLab.csproj"
                  path="${src.dir}\JenkinsfileLab.csproj" />
          </webmap>
+         echo msg
          <assemblyfolders>
             <include name="${build.server.dir}" />
             <include name="${3rd.party.lib.dir}" />
