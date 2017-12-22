@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="JenkinsfileLab">
    <target name="builds"> 
-    <echo>Build release configuration</echo>
-     <echo>not Build release configuration</echo>
     <solution configuration="release">
     <excludeprojects>
         <include name="JenkinsfileLab.sln" />
@@ -31,4 +29,7 @@
          </assemblyfolders>
       </solution>
    </target>
+   
+    <echo>Build release configuration</echo>
+     <echo>not Build release configuration</echo>
 </project>
