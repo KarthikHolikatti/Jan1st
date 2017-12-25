@@ -14,6 +14,7 @@
    <property name="3rd.party.lib.dir" value="..." />
     <property name="filename" value="JenkinsfileLab.sln" />
     <property name="fullpathoffile" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`\JenkinsfileLab.sln" />
+    <property name="slash" value="\" />
    def msg="building.........."
 
    <target name="build">
@@ -38,7 +39,7 @@
     <echo>Build release configuration</echo>
      <echo>not Build release configuration</echo>
      </if>
-     <if test="${file::exists ((src.dir)+"\"+(filename)) }">
+     <if test="${file::exists ((src.dir)(slash)(filename)) }">
     <echo>Build release configuration</echo>
      <echo>not Build release configuration</echo>
      </if>
