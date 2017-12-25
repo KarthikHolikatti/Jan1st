@@ -39,8 +39,6 @@
     <echo>Build release configuration</echo>
      <echo>not Build release configuration</echo>
      </if>
-     <if test="${file::exists (src.dir+'\'+filename) }">
+     <if test="${file::exists (src.dir+'\'+filename) }"/>
     <echo>new way of path</echo>
-     <echo>not Build release configuration</echo>
-     </if>
 </project>
