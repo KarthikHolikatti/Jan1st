@@ -36,7 +36,7 @@
     <echo message="The version file ${filename} doesn't exist or is empty!" />
 </if>
 <if test="${file::exists (fullpathoffile)}">
-    <echo>"<strong>Build release configuration</strong>"</echo>
+    echo"<strong>Build release configuration</strong>"
      <echo>not Build release configuration</echo>
      </if>
      <if test="${file::exists (src.dir+'\'+filename) }">
