@@ -12,9 +12,9 @@
 
   <target name="init">
    <echo>init</echo>
-    <if test="${file::exists (madetodel)}"/>
+    <if test="${file::exists ("madetodel")}"/>
     <delete file="madetodel"/>
-   <if test="${not file::exists (madetodel)}"/>
+   <if test="${not file::exists ("madetodel")}"/>
    <mkdir dir="madetodel" />
     <call target="${project.config}" />
     
