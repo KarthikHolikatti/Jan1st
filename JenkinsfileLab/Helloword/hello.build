@@ -16,7 +16,7 @@
             public static void ScriptMain(Project project) 
             {
                 
-                    Console.WriteLine("{0}", ${build.dir)};
+                    Console.WriteLine("{0}", "${build.dir)"};
                 
             }
             ]]>
