@@ -39,14 +39,12 @@
   </target>
 
   <target name="build" depends="debug,init" description="compiles the source code">
-    <property name="build.dir" value="${nant.project.basedir}/${nant.project.name}_${project.version}${basedir.suffix}"/>
+    <property name="build.dir" value="${project::get-base-directory()}/${project::get-name() }_${project.version}${basedir.suffix}"/>
     <mkdir dir="${build.dir}" />
-    <csc target="exe" output="${build.dir}/${nant.project.name}.exe" debug="${build.debug}">
-      <!--
+    <csc target="exe" output="${build.dir}/${project::get-name() }.exe" debug="${build.debug}">
       <sources>
-        <includes name="HelloWorld.cs" />
+        <includes name="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`\JenkinsfileLab\JenkinsfileLab.csproj" />
       </sources>
-        -->
     </csc>
     <echo>init build</echo>
    
