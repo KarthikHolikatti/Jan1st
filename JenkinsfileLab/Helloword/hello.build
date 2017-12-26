@@ -32,8 +32,7 @@
 
   <target name="build" depends="debug,init" description="compiles the source code">
     <echo>init build</echo>
-  </target>
-   <if test="${not file::exists (fullpathoffile) or file::get-length (fullpathoffile) == 0}">
+     <if test="${not file::exists (fullpathoffile) or file::get-length (fullpathoffile) == 0}">
     <echo message="The version file ${filename} doesn't exist or is empty!" />
 </if>
 <if test="${file::exists (fullpathoffile)}">
@@ -42,4 +41,6 @@
      </if>
      <if test="${file::exists (src.dir+'\'+filename) }"/>
     <echo>new way of path</echo>
+  </target>
+  
 </project>
