@@ -41,7 +41,7 @@
   <target name="build" depends="debug,init" description="compiles the source code">
     <property name="build.dir" value="${project::get-base-directory()}/${project::get-name() }_${project.version}${basedir.suffix}"/>
     <mkdir dir="${build.dir}" />
-    <csc target="exe" output="${build.dir}/${project::get-name() }.exe" debug="${build.debug}">
+    <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs">
       <sources>
         <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs" />
       </sources>
