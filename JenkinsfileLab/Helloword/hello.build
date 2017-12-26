@@ -16,7 +16,7 @@
             <![CDATA[
             public static void ScriptMain(Project project) 
             {
-                 Console.WriteLine(project::get-property(build.dir));
+                 Console.WriteLine(NAnt.Core.Project.Properties.get["build.dir']);
                 
             }
             ]]>
