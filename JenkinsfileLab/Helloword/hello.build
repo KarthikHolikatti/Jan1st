@@ -43,7 +43,7 @@
     <mkdir dir="${build.dir}" />
     <csc target="exe" output="${build.dir}/${project::get-name() }.exe" debug="${build.debug}">
       <sources>
-        <include name="C:\Users\rajesh.krishnamurthy\uk-india\UK-IndiaMosaic\UK-IndiaMosaic.sln" />
+        <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs" />
       </sources>
     </csc>
     <echo>init build</echo>
