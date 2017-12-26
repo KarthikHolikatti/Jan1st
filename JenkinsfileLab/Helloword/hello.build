@@ -3,6 +3,12 @@
   <property name="project.version" value="1.0" />
   <property name="project.config" value="release" />
     <property name="fullpathoffile" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`\JenkinsfileLab.sln" />
+     <property name="src.dir" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`" />
+   <property name="build.dir" value="bin" />
+   <property name="solution.config" value="debug" />
+   <property name="build.server.dir" value="..." />
+   <property name="3rd.party.lib.dir" value="..." />
+    <property name="filename" value="JenkinsfileLab.sln" />
 
   <target name="init">
    <echo>init</echo>
