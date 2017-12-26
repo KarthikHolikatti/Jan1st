@@ -10,8 +10,8 @@
    <property name="3rd.party.lib.dir" value="..." />
     <property name="filename" value="JenkinsfileLab.sln" />
     <property name="madetodel" value="madetodel" />
- <script language="C#" prefix="util" >
-        <code>
+    <target name="methodTest">
+    <CSScript method="true" >
             <![CDATA[
             public static void ScriptMain(Project project) 
             {
@@ -20,8 +20,8 @@
                 
             }
             ]]>
-        </code>
-        </script>
+    </CSScript>
+</target>
 
   <target name="init">
    <echo>init</echo>
