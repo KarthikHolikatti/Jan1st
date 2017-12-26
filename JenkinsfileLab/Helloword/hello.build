@@ -16,7 +16,7 @@
             <![CDATA[
             public static void ScriptMain(Project project) 
             {
-                 Console.WriteLine(Project.Properties["build.dir"]);
+                 Console.WriteLine(project::get-property(build.dir));
                 
             }
             ]]>
