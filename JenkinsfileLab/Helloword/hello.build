@@ -39,6 +39,15 @@
   </target>
 
   <target name="build" depends="debug,init" description="compiles the source code">
+    <property name="build.dir" value="${nant.project.basedir}/${nant.project.name}_${project.version}${basedir.suffix}"/>
+    <mkdir dir="${build.dir}" />
+    <csc target="exe" output="${build.dir}/${nant.project.name}.exe" debug="${build.debug}">
+      <!--
+      <sources>
+        <includes name="HelloWorld.cs" />
+      </sources>
+        -->
+    </csc>
     <echo>init build</echo>
    
   </target>
