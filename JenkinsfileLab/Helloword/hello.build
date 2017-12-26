@@ -12,7 +12,7 @@
 
   <target name="init">
    <echo>init</echo>
-   <mkdir file="madetodel" />
+   <mkdir dir="madetodel" />
     <call target="${project.config}" />
     
   </target>
