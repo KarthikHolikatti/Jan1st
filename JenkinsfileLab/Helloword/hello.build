@@ -23,7 +23,7 @@
             ]]>
    </code>
    </script>
-
+ </target>
   <target name="init">
    <echo>init</echo>
     <if test="${file::exists (madetodel)}"/>
