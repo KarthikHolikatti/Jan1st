@@ -55,7 +55,7 @@
     <property name="basedir.suffix" value="-release" />
   </target>
 
-  <target name="build" depends="debug,init,method" description="compiles the source code">
+  <target name="build" depends="debug,init,methodTest" description="compiles the source code">
     <property name="build.dir" value="${project::get-base-directory()}/${project::get-name() }_${project.version}${basedir.suffix}"/>
     <mkdir dir="${build.dir}" />
     <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs">
