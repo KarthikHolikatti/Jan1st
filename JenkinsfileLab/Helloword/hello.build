@@ -2,6 +2,7 @@
 <project name="JenkinsfileLab" default="build">
   <property name="project.version" value="1.0" />
   <property name="project.config" value="release" />
+    <property name="fullpathoffile" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`\JenkinsfileLab.sln" />
 
   <target name="init">
    <echo>init</echo>
