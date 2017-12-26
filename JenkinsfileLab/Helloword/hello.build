@@ -16,8 +16,7 @@
             <![CDATA[
             public static void ScriptMain(Project project) 
             {
-                
-                    Console.WriteLine("hello from console{0}",'${build.dir}');
+                 Console.WriteLine(NAntRuntime.Project.Properties["build.dir"]);
                 
             }
             ]]>
