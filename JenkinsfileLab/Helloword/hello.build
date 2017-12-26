@@ -12,7 +12,7 @@
 
   <target name="init">
    <echo>init</echo>
-    <antcall target="${project.config}" />
+    <call target="${project.config}" />
     
   </target>
   <if test="${not file::exists (fullpathoffile) or file::get-length (fullpathoffile) == 0}">
