@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="JenkinsfileLab">
-   <target name="builds"> 
-    <solution configuration="release">
-    <excludeprojects>
-        <include name="JenkinsfileLab.sln" />
-    </excludeprojects>
-    </solution>   
-   </target>
-   <property name="src.dir" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`" />
-   <property name="build.dir" value="bin" />
-   <property name="solution.config" value="debug" />
-   <property name="build.server.dir" value="..." />
-   <property name="3rd.party.lib.dir" value="..." />
-    <property name="filename" value="JenkinsfileLab.sln" />
-    <property name="fullpathoffile" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`\JenkinsfileLab.sln" />
-    <property name="slash" value="\" />
-   def msg="building.........."
+<project name="JenkinsfileLab"default="build">
+  <property name="project.version" value="1.0" />
+  <property name="project.config" value="release" />
 
-   <target name="build">
-      <solution solutionfile="${src.dir}\JenkinsfileLab.sln"
-          configuration="${solution.config}"
-          outputdir="${build.dir}">
-      <webmap>
-            <map url="http://Localhost/JenkinsfileLab.csproj"
-                 path="${src.dir}\JenkinsfileLab.csproj" />
-         </webmap>
-         <assemblyfolders>
-         def msg="building.........."
-            <include name="${build.server.dir}" />
-            <include name="${3rd.party.lib.dir}" />
-         </assemblyfolders>
-      </solution>
-   </target>
+  <target name="init">
+   <echo>init</echo>
+    <call target="${project.config}" />
+    
+  </target>
+
+  <target name="debug">
+   <echo>debug</echo>
+    <property name="project.config" value="debug" />
+    <property name="build.debug" value="true" />
+    <property name="basedir.suffix" value="-debug" />
+  </target>
+
+  <target name="release">
+   <echo>release</echo>
+    <property name="project.config" value="release" />
+    <property name="build.debug" value="false" />
+    <property name="basedir.suffix" value="-release" />
+  </target>
+
+  <target name="build" depends="init" description="compiles the source code">
+    <echo>init build</echo>
+    </csc>
+  </target>
    <if test="${not file::exists (fullpathoffile) or file::get-length (fullpathoffile) == 0}">
     <echo message="The version file ${filename} doesn't exist or is empty!" />
 </if>
