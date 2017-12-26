@@ -11,7 +11,8 @@
     <property name="filename" value="JenkinsfileLab.sln" />
     <property name="madetodel" value="madetodel" />
     <target name="methodTest">
-    <CSScript method="true" >
+    <script language="C#">
+          <code>
             <![CDATA[
             public static void ScriptMain(Project project) 
             {
@@ -20,8 +21,8 @@
                 
             }
             ]]>
-    </CSScript>
-</target>
+   </code>
+   </script>
 
   <target name="init">
    <echo>init</echo>
