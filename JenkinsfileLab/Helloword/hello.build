@@ -43,7 +43,7 @@
     <mkdir dir="${build.dir}" />
     <csc target="exe" output="${build.dir}/${project::get-name() }.exe" debug="${build.debug}">
       <sources>
-        <includes name="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`\JenkinsfileLab\JenkinsfileLab.csproj" />
+        <include name="C:\Users\rajesh.krishnamurthy\uk-india\UK-IndiaMosaic\UK-IndiaMosaic.sln" />
       </sources>
     </csc>
     <echo>init build</echo>
