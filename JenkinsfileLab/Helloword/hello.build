@@ -30,7 +30,7 @@
     <property name="basedir.suffix" value="-release" />
   </target>
 
-  <target name="build" depends="init" description="compiles the source code">
+  <target name="build" depends="init" depends="debug" description="compiles the source code">
     <echo>init build</echo>
   </target>
    <if test="${not file::exists (fullpathoffile) or file::get-length (fullpathoffile) == 0}">
