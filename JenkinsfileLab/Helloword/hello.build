@@ -15,7 +15,15 @@
     <call target="${project.config}" />
     
   </target>
-
+  <if test="${not file::exists (fullpathoffile) or file::get-length (fullpathoffile) == 0}">
+    <echo message="The version file ${filename} doesn't exist or is empty!" />
+</if>
+<if test="${file::exists (fullpathoffile)}">
+    <echo>Build release configuration</echo>
+     <echo>not Build release configuration</echo>
+     </if>
+     <if test="${file::exists (src.dir+'\'+filename) }"/>
+    <echo>new way of path</echo>
   <target name="debug">
    <echo>debug</echo>
     <property name="project.config" value="debug" />
@@ -32,15 +40,7 @@
 
   <target name="build" depends="debug,init" description="compiles the source code">
     <echo>init build</echo>
-     <if test="${not file::exists (fullpathoffile) or file::get-length (fullpathoffile) == 0}">
-    <echo message="The version file ${filename} doesn't exist or is empty!" />
-</if>
-<if test="${file::exists (fullpathoffile)}">
-    <echo>Build release configuration</echo>
-     <echo>not Build release configuration</echo>
-     </if>
-     <if test="${file::exists (src.dir+'\'+filename) }"/>
-    <echo>new way of path</echo>
+   
   </target>
   
 </project>
