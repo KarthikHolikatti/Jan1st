@@ -10,7 +10,18 @@
    <property name="3rd.party.lib.dir" value="..." />
     <property name="filename" value="JenkinsfileLab.sln" />
     <property name="madetodel" value="madetodel" />
-
+ <script language="C#" prefix="util" >
+        <code>
+            <![CDATA[
+            public static void ScriptMain(Project project) 
+            {
+                
+                    Console.WriteLine("{0}", build.dir);
+                
+            }
+            ]]>
+        </code>
+        </script>
 
   <target name="init">
    <echo>init</echo>
