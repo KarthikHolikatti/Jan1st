@@ -12,7 +12,7 @@
 
   <target name="init">
    <echo>init</echo>
-   <delete file="madetodel">
+   <delete file="madetodel" />
     <call target="${project.config}" />
     
   </target>
