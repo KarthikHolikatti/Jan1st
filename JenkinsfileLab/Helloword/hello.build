@@ -14,9 +14,7 @@
     <script language="c#">
     <code>
     <![CDATA[
-      using System;
-
-      public class Script
+    public class Script
       {
           public static void Main()
           {
