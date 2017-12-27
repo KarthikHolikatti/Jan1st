@@ -10,7 +10,7 @@
    <property name="3rd.party.lib.dir" value="..." />
     <property name="filename" value="JenkinsfileLab.sln" />
     <property name="madetodel" value="madetodel" />
-    <target name="methodTest">
+    <target name="methodTest1">
     <script language="C#">
     <code>
     <![CDATA[
@@ -22,6 +22,21 @@
     </code>
     </script>
  </target>
+     <target name="methodTest2">
+    <script language="C#">
+          <code>
+            <![CDATA[
+            public static void ScriptMain(Project project) 
+            {
+                
+                    Console.WriteLine("hello from console{0}");
+                
+            }
+            ]]>
+   </code>
+   </script>
+</target>
+
   <target name="init">
    <echo>init</echo>
     <if test="${file::exists (madetodel)}"/>
@@ -54,7 +69,7 @@
     <property name="basedir.suffix" value="-release" />
   </target>
 
-  <target name="build" depends="debug,init,methodTest" description="compiles the source code">
+  <target name="build" depends="debug,init,methodTest1,methodTest2" description="compiles the source code">
     <property name="build.dir" value="${project::get-base-directory()}/${project::get-name() }_${project.version}${basedir.suffix}"/>
     <mkdir dir="${build.dir}" />
     <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs">
