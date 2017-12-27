@@ -98,8 +98,10 @@
             <![CDATA[
             public static void ScriptMain(Project project) 
             {
-                
+                System.Diagnostics.Debug.Assert(false);
+          Console.WriteLine(NAntRuntime.Project.Properties["filename"]);
                     Console.WriteLine("hello from console ${filename}");
+                     Console.WriteLine("${filename}");
                 
             }
             ]]>
