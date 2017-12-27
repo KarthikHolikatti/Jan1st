@@ -126,20 +126,10 @@
           <code>
             <![CDATA[
                         public static void ScriptMain(Project project) 
-            {
-                a x=new a();
-                    x.sc(10);
+            {Console.Writeline("yo");
                 
             }
             
-            Class a{          
-            public static void sc(int n) 
-            {
-                
-                    Console.WriteLine("hello from console{0}"+n);
-                
-            }
-            }
 
             ]]>
    </code>
