@@ -111,7 +111,7 @@
     <script language="C#">
           <code>
             <![CDATA[
-            public static void ScriptMain(10) 
+            public static void ScriptMain(Project project) 
             {
                 
                     Console.WriteLine("hello from console{0}");
