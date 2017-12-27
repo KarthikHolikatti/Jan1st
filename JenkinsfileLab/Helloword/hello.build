@@ -125,6 +125,13 @@
     <script language="C#">
           <code>
             <![CDATA[
+                        public static void ScriptMain(Project project) 
+            {
+                a x=new a();
+                    x.sc(10);
+                
+            }
+            
             Class a{          
             public static void sc(int n) 
             {
@@ -133,13 +140,7 @@
                 
             }
             }
-            public static void ScriptMain(Project project) 
-            {
-                a x=new a();
-                    x.sc(10);
-                
-            }
-            
+
             ]]>
    </code>
    </script></target>
