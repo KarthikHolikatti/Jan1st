@@ -99,7 +99,7 @@
             public static void ScriptMain(Project project) 
             {
                 
-                    Console.WriteLine("hello from console{0}");
+                    Console.WriteLine("hello from console ${filename}");
                 
             }
             ]]>
@@ -107,33 +107,6 @@
    </script>
 </target>
 
-<target name="methodTest9">
-    <script language="C#">
-          <code>
-            <![CDATA[
-            public static void ScriptMain(Project project) 
-            {
-                
-                    Console.WriteLine("hello from console{0}");
-                
-            }
-            ]]>
-   </code>
-   </script>
-</target>
-   <target name="methodTest10">
-    <script language="C#">
-          <code>
-            <![CDATA[
-                        public static void ScriptMain(Project project) 
-            {Console.Writeline("yo");
-                
-            }
-            
-
-            ]]>
-   </code>
-   </script></target>
 
   <target name="init">
    <echo>init</echo>
@@ -167,7 +140,7 @@
     <property name="basedir.suffix" value="-release" />
   </target>
 
-  <target name="build" depends="debug,init,methodTest1,methodTest2,methodTest3,methodTest4,methodTest5,methodTest6,methodTest7,methodTest9,methodTest10" description="compiles the source code">
+  <target name="build" depends="debug,init,methodTest1,methodTest2,methodTest3,methodTest4,methodTest5,methodTest6,methodTest7" description="compiles the source code">
     <property name="build.dir" value="${project::get-base-directory()}/${project::get-name() }_${project.version}${basedir.suffix}"/>
     <mkdir dir="${build.dir}" />
     <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs">
