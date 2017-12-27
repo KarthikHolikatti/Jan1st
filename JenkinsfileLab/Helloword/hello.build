@@ -11,7 +11,7 @@
     <property name="filename" value="JenkinsfileLab.sln" />
     <property name="madetodel" value="madetodel" />
     <target name="methodTest">
-    <script language="c#">
+    <script language="C#">
     <code>
     <![CDATA[
     public class Script
