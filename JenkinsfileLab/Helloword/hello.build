@@ -14,7 +14,7 @@
     <script language="C#">
     <code>
     <![CDATA[
-          public static void Main()
+          public static void Main(Project project)
           {
                 Console.WriteLine("Hello World (from code)");
           }      
