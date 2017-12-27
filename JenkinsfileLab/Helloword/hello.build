@@ -92,6 +92,20 @@
    </code>
    </script>
 </target>
+<target name="methodTest6">
+    <script language="C#">
+          <code>
+            <![CDATA[
+            public static void ScriptMain() 
+            {
+                
+                    Console.WriteLine("hello from console{0}");
+                
+            }
+            ]]>
+   </code>
+   </script>
+</target>
 
   <target name="init">
    <echo>init</echo>
