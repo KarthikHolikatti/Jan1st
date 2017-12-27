@@ -18,13 +18,8 @@
       {
           public static void Main()
           {
-               SayHello("Hello World (from code)");
-          }              
-
-          public static void SayHello(string greeting)
-          {
-               Console.WriteLine(greeting);
-          }
+                Console.WriteLine("Hello World (from code)");
+          }      
       }
     ]]>
     </code>
