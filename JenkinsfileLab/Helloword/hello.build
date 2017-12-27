@@ -132,7 +132,7 @@
 		<echo>whennot Build release configuration</echo>
     </when>
     <otherwise>
-        <echo>WHENBuild configuration  is not supported!</echo>
+        <fail>WHENBuild configuration  is not supported!</fail>
     </otherwise>
 </choose>
     <call target="${project.config}" />
