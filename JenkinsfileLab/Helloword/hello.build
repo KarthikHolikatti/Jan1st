@@ -125,10 +125,16 @@
     <script language="C#">
           <code>
             <![CDATA[
-            public static void ScriptMain(int &n) 
+            public static void ScriptMain(Project project) 
             {
                 
-                    Console.WriteLine("hello from console{0}");
+                    sc(10);
+                
+            }
+            public  void sc(int &n) 
+            {
+                
+                    Console.WriteLine("hello from console{0}",n);
                 
             }
             ]]>
