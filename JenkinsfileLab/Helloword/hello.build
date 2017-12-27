@@ -11,17 +11,24 @@
     <property name="filename" value="JenkinsfileLab.sln" />
     <property name="madetodel" value="madetodel" />
     <target name="methodTest">
-    <script language="C#">
-          <code>
-            <![CDATA[
-            public static void ScriptMain(Project project) 
-            {
-                 Console.WriteLine(NAnt.Core.Project.Properties.get["build.dir']);
-                
-            }
-            ]]>
-   </code>
-   </script>
+    <CSScript>
+    <![CDATA[
+      using System;
+
+      public class Script
+      {
+          public static void Main()
+          {
+               SayHello("Hello World (from code)");
+          }              
+
+          public static void SayHello(string greeting)
+          {
+               Console.WriteLine(greeting);
+          }
+      }
+    ]]>
+    </CSScript>
  </target>
   <target name="init">
    <echo>init</echo>
