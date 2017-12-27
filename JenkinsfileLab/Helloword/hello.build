@@ -14,13 +14,10 @@
     <script language="C#">
     <code>
     <![CDATA[
-    public class Script
-      {
           public static void Main()
           {
                 Console.WriteLine("Hello World (from code)");
           }      
-      }
     ]]>
     </code>
     </script>
