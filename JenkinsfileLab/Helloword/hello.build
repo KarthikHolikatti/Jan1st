@@ -11,7 +11,8 @@
     <property name="filename" value="JenkinsfileLab.sln" />
     <property name="madetodel" value="madetodel" />
     <target name="methodTest">
-    <CSScript>
+    <script language="c#">
+    <code>
     <![CDATA[
       using System;
 
@@ -28,7 +29,8 @@
           }
       }
     ]]>
-    </CSScript>
+    </code>
+    </script>
  </target>
   <target name="init">
    <echo>init</echo>
