@@ -121,7 +121,7 @@
    </code>
    </script>
 </target>
-<target name="methodTest10">
+<target name="methodTest11">
     <script language="C#">
           <code>
             <![CDATA[
@@ -140,7 +140,7 @@
             ]]>
    </code>
    </script></target>
-   <target name="methodTest11">
+   <target name="methodTest12">
     <script language="C#">
           <code>
             <![CDATA[
