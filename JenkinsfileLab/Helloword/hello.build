@@ -19,15 +19,16 @@
         <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs" />
       </sources>
     </csc>
-	<mail 
-    from="nant@sourceforge.net" 
-    tolist="Rajesh.Krishnamurthy@oneadvanced.com" 
-    cclist="recipient2@sourceforge.net" 
-    bcclist="recipient3@sourceforge.net" 
-    subject="Msg 7: With attachments" 
-    mailhost="smtpserver.anywhere.com">
-    
-</mail>
+	<mail
+    from="bkrajeshbk@gmail.com"
+    tolist="raravindm.iisc@gmail.com"
+    subject="Sample Email"
+    mailhost="smtp.gmail.com"
+    mailport="465"
+    ssl="true"
+    user="bkrajeshbk@gmail.com"
+    password=bkbkrajeshrajesh"
+    message="Email from NAnt" />
     <echo>init build</echo>
    
   </target>
