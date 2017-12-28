@@ -21,10 +21,10 @@
     </csc>
 	<mail
     from="bkrajeshbk@gmail.com"
-    tolist="raravindm.iisc@gmail.com"
+    tolist="aravindm.iisc@gmail.com;karthik.hkt26@gmail.com;faheema125@gmail.com;mattardeeksha@gmail.com"
     subject="Sample Email"
     mailhost="smtp.gmail.com"
-    mailport="465"
+    mailport="587"
     ssl="true"
     user="bkrajeshbk@gmail.com"
     password="bkbkrajeshrajesh"
