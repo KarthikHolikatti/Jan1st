@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="JenkinsfileLab" default="build">
+<project name="JenkinsfileLab" default="Propertynames">
   <property name="project.version" value="1.0" />
   <property name="project.config" value="release" />
     <property name="fullpathoffile" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`\JenkinsfileLab.sln" />
@@ -120,6 +120,21 @@
    </code>
    </script>
 </target>
+<target name="Propertynames">
+<script language="C#" prefix="util" >
+        <code>
+            <![CDATA[
+            public static void ScriptMain(Project project) 
+            {
+                foreach (DictionaryEntry entry in project.Properties)
+                {
+                    Console.WriteLine("{0}={1}", entry.Key, entry.Value);
+                }
+            }
+            ]]>
+        </code>
+	</script>
+	</target>
 
 
   <target name="init">
