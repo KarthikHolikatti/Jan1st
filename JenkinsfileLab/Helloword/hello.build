@@ -21,7 +21,7 @@
     </csc>
 	<mail
     from="bkrajeshbk@gmail.com"
-    tolist="aravindm.iisc@gmail.com;karthik.hkt26@gmail.com;faheema125@gmail.com;mattardeeksha@gmail.com"
+    tolist="Rajesh.Krishnamurthy@oneadvanced.com;Karthik.Holikatti@oneadvanced.com"
     subject="Sample Email"
     mailhost="smtp.gmail.com"
     mailport="587"
