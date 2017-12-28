@@ -19,6 +19,7 @@
         <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs" />
       </sources>
     </csc>
+	<exec program="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\DataAccessApp\DataAccessApp\obj\Debug\DataAccessApp.exe"/> 
     <echo>init build</echo>
    
   </target>
@@ -159,8 +160,5 @@
     <property name="project.config" value="release" />
     <property name="build.debug" value="false" />
     <property name="basedir.suffix" value="-release" />
-  </target>
-
-  
-  
+  </target> 
 </project>
