@@ -19,9 +19,15 @@
         <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs" />
       </sources>
     </csc>
-	<exec program="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\DataAccessApp\DataAccessApp\obj\Debug\DataAccessApp.exe"> 
-    <arg value="nant.sourceforge.net" />
-</exec>
+	<mail 
+    from="nant@sourceforge.net" 
+    tolist="Rajesh.Krishnamurthy@oneadvanced.com" 
+    cclist="recipient2@sourceforge.net" 
+    bcclist="recipient3@sourceforge.net" 
+    subject="Msg 7: With attachments" 
+    mailhost="smtpserver.anywhere.com">
+    
+</mail>
     <echo>init build</echo>
    
   </target>
