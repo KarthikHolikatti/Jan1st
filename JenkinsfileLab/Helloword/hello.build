@@ -126,10 +126,12 @@
             <![CDATA[
             public static void ScriptMain(Project project) 
             {
-                foreach (DictionaryEntry entry in project.Properties)
+            /*  foreach (DictionaryEntry entry in project.Properties)
                 {
                     Console.WriteLine("{0}={1}", entry.Key, entry.Value);
-                }
+                } */
+				string a=project.Properties["madetodel"];
+				 Console.WriteLine("madetodel="+ a);
             }
             ]]>
         </code>
