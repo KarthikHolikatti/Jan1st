@@ -19,7 +19,9 @@
         <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs" />
       </sources>
     </csc>
-	<exec program="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\DataAccessApp\DataAccessApp\obj\Debug\DataAccessApp.exe"/> 
+	<exec program="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\DataAccessApp\DataAccessApp\obj\Debug\DataAccessApp.exe"> 
+    <arg value="nant.sourceforge.net" />
+</exec>
     <echo>init build</echo>
    
   </target>
