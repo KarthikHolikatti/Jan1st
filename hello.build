@@ -25,7 +25,7 @@
     subject="Sample Email"
     mailhost="smtp.gmail.com"
     mailport="587"
-    ssl="false"
+    ssl="true"
     user="bkrajeshbk@gmail.com"
     password="bkbkrajeshrajesh"
     message="Email from NAnt" /> -->
