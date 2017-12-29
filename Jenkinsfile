@@ -2,6 +2,9 @@ pipeline {
     agent any
     stages {
         stage ("Checkout SCM") {
+            steps{
+            git url:"https://github.com/Rajeshkrishnamurthy5/dotnet.git"
+            }
         }
         stage("Build") {
             steps {
