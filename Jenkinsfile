@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-               bat "nant build -Dbuild.Jenkins=True"
+               bat "nant build"
             }
         }
         stage('Test') {
