@@ -3,9 +3,18 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps {
-                echo 'Building..'
+            parallel d{
+                echo 'intitialize'
+               bat "nant init"
+            }, a {
+                echo 'Building.. build'
                bat "nant build"
+            }, b{
+                echo 'Building..propertynames'
+               bat "nant Propertynames"
+            },c{
+                echo 'Building..methods'
+               bat "nant methodTest1"
             }
         }
         stage('Test') {
