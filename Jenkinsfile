@@ -1,18 +1,19 @@
 pipeline {
     agent any
-
+ stage "Checkout"
+ checkout scm
     stages {
         stage('Build') {
-            parallel d{
+           parallel d: {
                 echo 'intitialize'
                bat "nant init"
-            }, a {
+            }, a: {
                 echo 'Building.. build'
                bat "nant build"
-            }, b{
+            }, b:{
                 echo 'Building..propertynames'
                bat "nant Propertynames"
-            },c{
+            },c:{
                 echo 'Building..methods'
                bat "nant methodTest1"
             }
