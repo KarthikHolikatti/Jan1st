@@ -21,13 +21,13 @@
     </csc>
 	<!-- <mail
     from="bkrajeshbk@gmail.com"
-    tolist="Rajesh.Krishnamurthy@oneadvanced.com;Karthik.Holikatti@oneadvanced.com;Aravind.Mohan@oneadvanced.com;Deeksha.Kini@oneadvanced.com;Rukiyath.Faheema@oneadvanced.com"
+    tolist="Rajesh.Krishnamurthy@oneadvanced.com"
     subject="Sample Email"
     mailhost="smtp.gmail.com"
     mailport="587"
-    ssl="true"
+    ssl="false"
     user="bkrajeshbk@gmail.com"
-    password=""
+    password="bkbkrajeshrajesh"
     message="Email from NAnt" /> -->
     <echo>init build</echo>
    
