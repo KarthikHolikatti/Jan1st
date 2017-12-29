@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("Checkout SCM") {
          steps {
-            checkout scm
+           git url: 'https://github.com/jfrogdev/project-examples.git'
          }
         }
         stage("Build") {
