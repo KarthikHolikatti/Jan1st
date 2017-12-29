@@ -7,6 +7,7 @@ pipeline {
          }
         }
         stage("Build") {
+            steps {
            parallel d: {
                 echo 'intitialize'
                bat "nant init"
@@ -20,6 +21,7 @@ pipeline {
                 echo 'Building..methods'
                bat "nant methodTest1"
             }
+                 }
         }
         stage("Test") {
             steps {
