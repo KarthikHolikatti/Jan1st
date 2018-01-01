@@ -1,21 +1,3 @@
-node {
-    stage('Example') {
-        try {
-            sh 'exit 1'
-        }
-        catch (exc) {
-            echo 'Something failed, I should sound the klaxons!'
-            throw err
-            }//catch
-            finally {
-                    def finalMessage ="defining final message"
-                    echo finalMessage
-	    }      
-        
-    }
-}
-
-/*
 node{
  /* stages {
                
@@ -24,7 +6,7 @@ node{
                steps{
                      git url:"https://github.com/Rajeshkrishnamurthy5/dotnet.git"
                      }
-here                   }
+here                   }*/
 	  
             stage("Build") {
 		    	   
@@ -47,7 +29,7 @@ here                   }
 	     }//try    
 			  catch (Exception err) {
                     currentBuild.result = "FAILURE"
-
+			                     bat "nant build"
                     //hipchat message that the build has failed
                     def errorMessage = "defining message"
                     //hipchatSend color: 'RED', message: errorMessage
