@@ -5,8 +5,13 @@ node {
         }
         catch (exc) {
             echo 'Something failed, I should sound the klaxons!'
-            throw
-        }
+            throw err
+            }//catch
+            finally {
+                    def finalMessage ="defining final message"
+                    echo finalMessage
+	    }      
+        
     }
 }
 
