@@ -26,7 +26,7 @@ node{
 			   },g:{
                      echo 'Building..methods'
                      bat "nant methodTest10"
-                     }
+                     } failFast: false
 	//	}//steps of stage build
 			     }//try
                         catch (Exception err) {
