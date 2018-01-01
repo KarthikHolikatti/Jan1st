@@ -11,10 +11,7 @@
     <property name="filename" value="JenkinsfileLab.sln" />
     <property name="madetodel" value="madetodel" />
     
-    <target name="build" depends="debug" description="compiles the source code">
-    <property name="build.dir" value="${project::get-base-directory()}/${project::get-name() }_${project.version}${basedir.suffix}"/>
-    <mkdir dir="${build.dir}" />
-	 <mail
+    <target name="build"  description="compiles the source code">
     from="bkrajeshbk@gmail.com"
     tolist="Rajesh.Krishnamurthy@oneadvanced.com"
     subject="Sample Email"
@@ -22,11 +19,11 @@
     mailport="587"
     ssl="true"
     user="bkrajeshbk@gmail.com"
-    password="bkbkrajeshrajesh"
+    password=""
     message="Email from NAnt" />
-    <echo>init build for testing email</echo>
-   
+    <echo>init build for testing email</echo>   
   </target>
+  
     <target name="methodTest1" depends="methodTest8,methodTest9,methodTest10">
     <script language="C#">
     <code>
@@ -39,6 +36,7 @@
     </code>
     </script>
  </target>
+ 
      <target name="methodTest22">
   	 <mail
     from="bkrajeshbk@gmail.com"
