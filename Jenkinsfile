@@ -1,12 +1,13 @@
 node{
-    stages {
+ /* stages {
                
             stage ("Checkout SCM") {
                   
                steps{
                      git url:"https://github.com/Rajeshkrishnamurthy5/dotnet.git"
                      }
-                   }
+                   }*/
+	
             stage("Build") {
 		    	     try {
           currentBuild.result = "SUCCESS"
@@ -53,7 +54,7 @@ node{
                   }//finally
     }//stage-build
 				  
-           stage("Test") {
+    /*       stage("Test") {
                steps {
                   echo 'Testing..'
                  } 
@@ -65,4 +66,5 @@ node{
                  }
               }//stage-deploy
     }//stages
-
+*/
+}
