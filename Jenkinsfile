@@ -22,6 +22,7 @@ pipeline {
                      echo 'Building..propertynames'
                      bat "nant Propertynames"
                      },e:{
+			  step{
 			     try {
           currentBuild.result = "SUCCESS"
                      echo 'Building..methods'
@@ -46,7 +47,7 @@ pipeline {
             finally {
                     def finalMessage ="defining final message"
                     echo finalMessage
-            }          
+	    }         } 
                      },g:{
                      echo 'Building..methods'
                      bat "nant methodTest10"
