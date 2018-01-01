@@ -13,9 +13,6 @@ here                   }*/
                   parallel d: {
                      echo 'intitialize'
                      bat "nant init"
-                     }, a: {
-                     echo 'Building.. build'
-                     bat "nant build"
                      }, b:{
                      echo 'Building..propertynames'
                      bat "nant Propertynames"
