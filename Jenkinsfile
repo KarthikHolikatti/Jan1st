@@ -23,11 +23,12 @@ node{
                      },e:{
                      echo 'Building..methods'
                      bat "nant methodTest9"
-			   },g:{
+		     },g:{
                      echo 'Building..methods'
                      bat "nant methodTest10"
-                     } failFast: false
-			     }//try
+                     } 
+	    }
+	     }//try
                         catch (err) {
                     currentBuild.result = "FAIURE"
 
