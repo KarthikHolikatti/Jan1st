@@ -21,7 +21,7 @@ here                   }*/
           currentBuild.result = "SUCCESS"
 				  
                      echo 'Building..methods'
-                     bat "nant methodTest9"
+                     bat "nant init"
 				  
 	     }//try    
 			  catch (Exception err) {
