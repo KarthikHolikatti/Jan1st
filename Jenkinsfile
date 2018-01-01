@@ -1,5 +1,6 @@
 pipeline {
     agent any
+          currentBuild.result = "SUCCESS"
     stages {
         stage ("Checkout SCM") {
             steps{
@@ -7,7 +8,7 @@ pipeline {
             }
         }
         stage("Build") { 
-            currentBuild.result = "SUCCESS"
+      
             try {
                 steps {
            parallel d: {
