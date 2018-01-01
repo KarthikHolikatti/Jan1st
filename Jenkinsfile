@@ -1,7 +1,6 @@
 pipeline {
 
-   try {
-          currentBuild.result = "SUCCESS"
+
     stages {
                
             stage ("Checkout SCM") {
@@ -23,29 +22,11 @@ pipeline {
                      echo 'Building..propertynames'
                      bat "nant Propertynames"
                      },e:{
+			     try {
+          currentBuild.result = "SUCCESS"
                      echo 'Building..methods'
                      bat "nant methodTest9"
-                     },g:{
-                     echo 'Building..methods'
-                     bat "nant methodTest10"
-                     }
-                 
-                    }
-                  }
-				  
-           stage("Test") {
-               steps {
-                  echo 'Testing..'
-                 } 
-              }
-			  
-           stage("Deploy") {
-                steps {
-                 echo 'Deploying....'
-                 }
-              }
-			}
-		}
+				     }
                         catch (err) {
                     currentBuild.result = "FAIURE"
 
@@ -66,6 +47,27 @@ pipeline {
                     def finalMessage ="defining final message"
                     echo finalMessage
             }          
+                     },g:{
+                     echo 'Building..methods'
+                     bat "nant methodTest10"
+                     }
+                 
+                    }
+                  }
+				  
+           stage("Test") {
+               steps {
+                  echo 'Testing..'
+                 } 
+              }
+			  
+           stage("Deploy") {
+                steps {
+                 echo 'Deploying....'
+                 }
+              }
+			}
+		
                          
         
 }
