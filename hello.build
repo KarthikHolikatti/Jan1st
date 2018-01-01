@@ -39,7 +39,7 @@
     </code>
     </script>
  </target>
-     <target name="methodTest2">
+     <target name="methodTest22">
     <script language="C#">
           <code>
             <![CDATA[
