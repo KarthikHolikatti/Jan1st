@@ -1,7 +1,8 @@
 pipeline {
-    agent any
-    try {
+      try {
           currentBuild.result = "SUCCESS"
+           agent any
+  
           stages {
             stage ("Checkout SCM") {
                steps{
