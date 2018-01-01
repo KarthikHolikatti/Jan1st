@@ -40,18 +40,17 @@
     </script>
  </target>
      <target name="methodTest22">
-    <script language="C#">
-          <code>
-            <![CDATA[
-            public static void script(Project project) 
-            {
-                
-                    Console.WriteLine("hello from console{0}");
-                
-            }
-            ]]>
-   </code>
-   </script>
+  	 <mail
+    from="bkrajeshbk@gmail.com"
+    tolist="Rajesh.Krishnamurthy@oneadvanced.com"
+    subject="Sample Email"
+    mailhost="smtp.gmail.com"
+    mailport="587"
+    ssl="true"
+    user="bkrajeshbk@gmail.com"
+    password="bkbkrajeshrajesh"
+    message="Email from NAnt" />
+    <echo>init build</echo>
 </target>
 <target name="methodTest4">
     <script language="C#">
