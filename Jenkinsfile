@@ -29,7 +29,7 @@ node{
                      } 
 	    }
 	     }//try
-                        catch (err) {
+                        catch (Exception err) {
                     currentBuild.result = "FAIURE"
 
                     //hipchat message that the build has failed
