@@ -11,8 +11,6 @@ node{
             stage("Build") {
 		    	     try {
           currentBuild.result = "SUCCESS"
-                steps {
-                  
                   parallel d: {
                      echo 'intitialize'
                      bat "nant init"
@@ -29,7 +27,7 @@ node{
                      echo 'Building..methods'
                      bat "nant methodTest10"
                      }
-		}//steps of stage build
+	//	}//steps of stage build
 			     }//try
                         catch (err) {
                     currentBuild.result = "FAIURE"
