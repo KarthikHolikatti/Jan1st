@@ -1,10 +1,12 @@
 pipeline {
-      try {
-          currentBuild.result = "SUCCESS"
+      
            agent any
   
           stages {
+                try {
+          currentBuild.result = "SUCCESS"
             stage ("Checkout SCM") {
+                  
                steps{
                      git url:"https://github.com/Rajeshkrishnamurthy5/dotnet.git"
                      }
@@ -39,9 +41,7 @@ pipeline {
                  echo 'Deploying....'
                  }
               }
-             }
-    }
-        
+                }
                   catch (err) {
                     currentBuild.result = "FAIURE"
 
@@ -62,4 +62,7 @@ pipeline {
                     def finalMessage ="defining final message"
                     echo finalMessage
             }    
+                
+             }
+        
 }
