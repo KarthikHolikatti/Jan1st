@@ -3,8 +3,7 @@ pipeline {
            agent any
   
           stages {
-                try {
-          currentBuild.result = "SUCCESS"
+               
             stage ("Checkout SCM") {
                   
                steps{
@@ -13,6 +12,8 @@ pipeline {
                    }
             stage("Build") {          
                 steps {
+                       try {
+          currentBuild.result = "SUCCESS"
                   parallel d: {
                      echo 'intitialize'
                      bat "nant init"
@@ -29,20 +30,8 @@ pipeline {
                      echo 'Building..methods'
                      bat "nant methodTest10"
                      }
-                    }
-                  }
-           stage("Test") {
-               steps {
-                  echo 'Testing..'
-                 } 
-              }
-           stage("Deploy") {
-                steps {
-                 echo 'Deploying....'
-                 }
-              }
-                }
-                  catch (err) {
+                       }
+                        catch (err) {
                     currentBuild.result = "FAIURE"
 
                     //hipchat message that the build has failed
@@ -61,7 +50,21 @@ pipeline {
             finally {
                     def finalMessage ="defining final message"
                     echo finalMessage
-            }    
+            }          
+                         
+                    }
+                  }
+           stage("Test") {
+               steps {
+                  echo 'Testing..'
+                 } 
+              }
+           stage("Deploy") {
+                steps {
+                 echo 'Deploying....'
+                 }
+              }
+                 
                 
              }
         
