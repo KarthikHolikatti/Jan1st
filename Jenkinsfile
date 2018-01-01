@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    try {
           currentBuild.result = "SUCCESS"
     stages {
         stage ("Checkout SCM") {
@@ -9,7 +10,7 @@ pipeline {
         }
         stage("Build") { 
       
-            try {
+            
                 steps {
            parallel d: {
                 echo 'intitialize'
@@ -29,6 +30,18 @@ pipeline {
                   }
             }
             }
+        stage("Test") {
+            steps {
+                echo 'Testing..'
+            } 
+        }
+        stage("Deploy") {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+        
                   catch (err) {
                     currentBuild.result = "FAIURE"
 
@@ -49,16 +62,5 @@ pipeline {
                     def finalMessage ="defining final message"
                     echo finalMessage
             }    
-        }
-        stage("Test") {
-            steps {
-                echo 'Testing..'
-            } 
-        }
-        stage("Deploy") {
-            steps {
-                echo 'Deploying....'
-            }
-        }
     }
 }
