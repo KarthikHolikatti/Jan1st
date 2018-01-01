@@ -7,8 +7,7 @@ node{
                      git url:"https://github.com/Rajeshkrishnamurthy5/dotnet.git"
                      }
                    }*/
-	  try {
-          currentBuild.result = "SUCCESS"
+	  
             stage("Build") {
 		    	   
                   parallel d: {
@@ -21,16 +20,15 @@ node{
                      echo 'Building..propertynames'
                      bat "nant Propertynames"
                      },e:{
+			  try {
+          currentBuild.result = "SUCCESS"
+				  
                      echo 'Building..methods'
                      bat "nant methodTest9"
-		     },g:{
-                     echo 'Building..methods'
-                     bat "nant methodTest10"
-                     } 
-	    }
-	     }//try
-                        catch (Exception err) {
-                    currentBuild.result = "FAIURE"
+				  
+	     }//try    
+			  catch (Exception err) {
+                    currentBuild.result = "FAILURE"
 
                     //hipchat message that the build has failed
                     def errorMessage = "defining message"
@@ -49,6 +47,12 @@ node{
                     def finalMessage ="defining final message"
                     echo finalMessage
 	    }      
+		     },g:{
+                     echo 'Building..methods'
+                     bat "nant methodTest10"
+                     } 
+	    }
+                    
    //stage-build
 				  
     /*       stage("Test") {
