@@ -28,8 +28,8 @@ here                   }*/
 				  
 	     }//try    
 			  catch (Exception err) {
-                    currentBuild.result = "SUCCESS"
-			                     bat "nant methodTest2"
+                    currentBuild.result = "FAILURE"
+			                     bat "nant methodTest22"
                     //hipchat message that the build has failed
                     def errorMessage = "defining message"
                     //hipchatSend color: 'RED', message: errorMessage
