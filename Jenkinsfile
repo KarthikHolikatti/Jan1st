@@ -65,5 +65,4 @@ node{
                  }
               }//stage-deploy
     }//stages
-   
-}//node
+
