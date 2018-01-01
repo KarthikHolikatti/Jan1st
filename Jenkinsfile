@@ -29,7 +29,7 @@ node{
                      } failFast: false
 	//	}//steps of stage build
 			     }//try
-                        catch (Exception err) {
+                        catch (err) {
                     currentBuild.result = "FAIURE"
 
                     //hipchat message that the build has failed
