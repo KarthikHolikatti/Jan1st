@@ -1,4 +1,4 @@
-node {
+pipelline {
 
    try {
           currentBuild.result = "SUCCESS"
