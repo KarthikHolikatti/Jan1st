@@ -19,7 +19,7 @@ pipeline {
                bat "nant Propertynames"
             },e:{
                 echo 'Building..methods'
-               bat "nant methodTest9"
+               bat "nant methodTest8"
             },g:{
                 echo 'Building..methods'
                bat "nant methodTest10"
