@@ -1,8 +1,8 @@
 node {
 
-           try {
+   try {
           currentBuild.result = "SUCCESS"
-          stages {
+    stages {
                
             stage ("Checkout SCM") {
                   
@@ -32,17 +32,20 @@ node {
                  
                     }
                   }
+				  
            stage("Test") {
                steps {
                   echo 'Testing..'
                  } 
               }
+			  
            stage("Deploy") {
                 steps {
                  echo 'Deploying....'
                  }
               }
-      }
+			}
+		}
                         catch (err) {
                     currentBuild.result = "FAIURE"
 
