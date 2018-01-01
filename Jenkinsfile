@@ -1,6 +1,4 @@
-pipeline {
-
-	agent any
+node{
     stages {
                
             stage ("Checkout SCM") {
@@ -9,7 +7,9 @@ pipeline {
                      git url:"https://github.com/Rajeshkrishnamurthy5/dotnet.git"
                      }
                    }
-            stage("Build") {          
+            stage("Build") {
+		    	     try {
+          currentBuild.result = "SUCCESS"
                 steps {
                   
                   parallel d: {
@@ -22,12 +22,14 @@ pipeline {
                      echo 'Building..propertynames'
                      bat "nant Propertynames"
                      },e:{
-			  step{
-			     try {
-          currentBuild.result = "SUCCESS"
                      echo 'Building..methods'
                      bat "nant methodTest9"
-				     }
+			   },g:{
+                     echo 'Building..methods'
+                     bat "nant methodTest10"
+                     }
+		}//steps of stage build
+			     }//try
                         catch (err) {
                     currentBuild.result = "FAIURE"
 
@@ -43,32 +45,25 @@ pipeline {
                       to: 'Rajesh.Krishnamurthy@oneadvanced.com'
 
                     throw err
-            }
+            }//catch
             finally {
                     def finalMessage ="defining final message"
                     echo finalMessage
-	    }         } 
-                     },g:{
-                     echo 'Building..methods'
-                     bat "nant methodTest10"
-                     }
-                 
-                    }
-                  }
+	    }      
+                  }//finally
+    }//stage-build
 				  
            stage("Test") {
                steps {
                   echo 'Testing..'
                  } 
-              }
+              }//stage-test
 			  
            stage("Deploy") {
                 steps {
                  echo 'Deploying....'
                  }
-              }
-			}
-		
-                         
-        
-}
+              }//stage-deploy
+    }//stages
+   
+}//node
