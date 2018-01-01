@@ -14,16 +14,7 @@
     <target name="build" depends="debug" description="compiles the source code">
     <property name="build.dir" value="${project::get-base-directory()}/${project::get-name() }_${project.version}${basedir.suffix}"/>
     <mkdir dir="${build.dir}" />
-	 <mail
-    from="bkrajeshbk@gmail.com"
-    tolist="Rajesh.Krishnamurthy@oneadvanced.com"
-    subject="Sample Email"
-    mailhost="smtp.gmail.com"
-    mailport="587"
-    ssl="true"
-    user="bkrajeshbk@gmail.com"
-    password="bkbkrajeshrajesh"
-    message="Email from NAnt" />
+
     <echo>init build</echo>
    
   </target>
