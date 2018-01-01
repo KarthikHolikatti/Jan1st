@@ -134,21 +134,21 @@
       <sources>
         <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\CarRentalApp\CarRentalApp\testcarrental.cpp" />
       </sources>
-    </csc
+    </csc>
 </target>
 <target name="methodTest9">
     <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\DeliveryApplication\DeliveryApplicatio\Program.cs">
       <sources>
         <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\DeliveryApplication\DeliveryApplication\Programs.cs" />
       </sources>
-    </csc
+    </csc>
 </target>
 <target name="methodTest10">
     <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\InteriorDecorator\InteriorDecorator\Program.cs">
       <sources>
         <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\InteriorDecorator\InteriorDecorator\Program.cs" />
       </sources>
-    </csc
+    </csc>
 </target>
 <target name="Propertynames">
 <script language="C#" prefix="util" >
