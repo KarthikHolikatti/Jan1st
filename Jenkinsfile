@@ -1,7 +1,7 @@
 node {
-      
-           agent any
-  
+
+           try {
+          currentBuild.result = "SUCCESS"
           stages {
                
             stage ("Checkout SCM") {
@@ -12,8 +12,7 @@ node {
                    }
             stage("Build") {          
                 steps {
-                       try {
-          currentBuild.result = "SUCCESS"
+                  
                   parallel d: {
                      echo 'intitialize'
                      bat "nant init"
@@ -30,7 +29,20 @@ node {
                      echo 'Building..methods'
                      bat "nant methodTest10"
                      }
-                       }
+                 
+                    }
+                  }
+           stage("Test") {
+               steps {
+                  echo 'Testing..'
+                 } 
+              }
+           stage("Deploy") {
+                steps {
+                 echo 'Deploying....'
+                 }
+              }
+      }
                         catch (err) {
                     currentBuild.result = "FAIURE"
 
@@ -52,19 +64,5 @@ node {
                     echo finalMessage
             }          
                          
-                    }
-                  }
-           stage("Test") {
-               steps {
-                  echo 'Testing..'
-                 } 
-              }
-           stage("Deploy") {
-                steps {
-                 echo 'Deploying....'
-                 }
-              }
-             
-   }
         
 }
