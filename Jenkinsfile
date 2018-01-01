@@ -17,15 +17,9 @@ pipeline {
             }, b:{
                 echo 'Building..propertynames'
                bat "nant Propertynames"
-            },c:{
-                echo 'Building..methods'
-               bat "nant methodTest1"
             },e:{
                 echo 'Building..methods'
                bat "nant methodTest8"
-            },f:{
-                echo 'Building..methods'
-               bat "nant methodTest9"
             },g:{
                 echo 'Building..methods'
                bat "nant methodTest10"
