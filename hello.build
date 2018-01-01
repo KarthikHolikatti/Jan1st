@@ -32,13 +32,13 @@
     <echo>init build</echo>
    
   </target>
-    <target name="methodTest1" depends="methodTest2,methodTest3,methodTest4,methodTest5,methodTest6,methodTest7">
+    <target name="methodTest1" depends="methodTest8,methodTest9,methodTest10">
     <script language="C#">
     <code>
     <![CDATA[
           public static void ScriptMain(Project project)
           {
-                Console.WriteLine("Hello World (from code)");
+                Console.WriteLine("compiling...");
           }      
     ]]>
     </code>
@@ -128,6 +128,27 @@
             ]]>
    </code>
    </script>
+</target>
+<target name="methodTest8">
+    <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\CarRentalApp\CarRentalApp\testcarrental.cpp">
+      <sources>
+        <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\CarRentalApp\CarRentalApp\testcarrental.cpp" />
+      </sources>
+    </csc
+</target>
+<target name="methodTest9">
+    <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\DeliveryApplication\DeliveryApplicatio\Program.cs">
+      <sources>
+        <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\DeliveryApplication\DeliveryApplication\Programs.cs" />
+      </sources>
+    </csc
+</target>
+<target name="methodTest10">
+    <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\InteriorDecorator\InteriorDecorator\Program.cs">
+      <sources>
+        <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\InteriorDecorator\InteriorDecorator\Program.cs" />
+      </sources>
+    </csc
 </target>
 <target name="Propertynames">
 <script language="C#" prefix="util" >
