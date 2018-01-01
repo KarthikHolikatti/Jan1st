@@ -7,10 +7,10 @@ node{
                      git url:"https://github.com/Rajeshkrishnamurthy5/dotnet.git"
                      }
                    }*/
-	
-            stage("Build") {
-		    	     try {
+	  try {
           currentBuild.result = "SUCCESS"
+            stage("Build") {
+		    	   
                   parallel d: {
                      echo 'intitialize'
                      bat "nant init"
@@ -26,9 +26,7 @@ node{
 			   },g:{
                      echo 'Building..methods'
                      bat "nant methodTest10"
-                     } 
-				      }failFast: false
-	//	}//steps of stage build
+                     } failFast: false
 			     }//try
                         catch (err) {
                     currentBuild.result = "FAIURE"
@@ -50,7 +48,6 @@ node{
                     def finalMessage ="defining final message"
                     echo finalMessage
 	    }      
-                  }//finally
    //stage-build
 				  
     /*       stage("Test") {
@@ -65,5 +62,5 @@ node{
                  }
               }//stage-deploy
     }//stages
-*/
+*/}
 
