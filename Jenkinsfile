@@ -1,4 +1,4 @@
-pipelline {
+pipeline {
 
    try {
           currentBuild.result = "SUCCESS"
