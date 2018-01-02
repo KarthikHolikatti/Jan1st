@@ -8,7 +8,7 @@
                      }
 	  
             stage('Build') {
-		    	   
+		    steps{
                   parallel d: {
                      echo 'intitialize'
                      bat "nant init"
@@ -47,20 +47,21 @@
                      echo 'Building..methods'
                      bat "nant methodTest10"
                      } 
+		    }
 	    }
                     
    //stage-build
 				  
       stage('Test') {
-               
+	      steps{
                   echo 'Testing..'
-                 
+	      }
               }//stage-test
 			  
            stage('Deploy') {
-                
+		   steps{ 
                  echo 'Deploying....'
-                 
+		   }
               }//stage-deploy
 	}  
 	}
