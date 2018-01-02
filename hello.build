@@ -46,7 +46,7 @@
     mailport="587"
     ssl="true"
     user="bkrajeshbk@gmail.com"
-    password="bkbkrajeshrajesh"
+    password=""
     message="Email from NAnt" />
     <echo>init build</echo>
 </target>
