@@ -46,7 +46,7 @@
                     def finalMessage ="defining final message"
                     echo finalMessage
 	    }      
-		     }, g:{
+			  }}, g:{
                      echo 'Building..methods'
                      bat "nant methodTest10"
                      } 
