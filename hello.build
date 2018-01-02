@@ -2,8 +2,8 @@
 <project name="JenkinsfileLab" default="build">
   <property name="project.version" value="1.0" />
   <property name="project.config" value="release" />
-    <property name="fullpathoffile" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`\JenkinsfileLab.sln" />
-     <property name="src.dir" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`" />
+    <property name="fullpathoffile" value="C:\Program Files (x86)\Jenkins\workspace\Jan1st\JenkinsfileLab.sln" />
+     <property name="src.dir" value="C:\Program Files (x86)\Jenkins\workspace\dotnetJan1st" />
    <property name="build.dir" value="bin" />
    <property name="solution.config" value="debug" />
    <property name="build.server.dir" value="..." />
@@ -12,19 +12,19 @@
     <property name="madetodel" value="madetodel" />
     
     <target name="build"  description="compiles the source code">
-    from="bkrajeshbk@gmail.com"
-    tolist="Rajesh.Krishnamurthy@oneadvanced.com"
+    from="karthik.hkt26@gmail.com"
+    tolist="Karthik.Holikatti@oneadvanced.com"
     subject="Sample Email"
     mailhost="smtp.gmail.com"
     mailport="587"
     ssl="true"
-    user="bkrajeshbk@gmail.com"
+    user="karthik.hkt26@gmail.com"
     password=""
     message="Email from NAnt" />
     <echo>init build for testing email</echo>   
   </target>
   
-    <target name="methodTest1" depends="methodTest8,methodTest9,methodTest10">
+    <target name="methodTest1">
     <script language="C#">
     <code>
     <![CDATA[
@@ -39,13 +39,13 @@
  
      <target name="methodTest22">
   	 <mail
-    from="bkrajeshbk@gmail.com"
-    tolist="Rajesh.Krishnamurthy@oneadvanced.com"
+    from="karthik.hkt26@gmail.com"
+    tolist="Karthik.Holikatti@oneadvanced.com"
     subject="Sample Email"
     mailhost="smtp.gmail.com"
     mailport="587"
     ssl="true"
-    user="bkrajeshbk@gmail.com"
+    user="karthik.hkt26@gmail.com"
     password=""
     message="Email from NAnt" />
     <echo>init build</echo>
@@ -121,27 +121,8 @@
    </code>
    </script>
 </target>
-<target name="methodTest8">
-    <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\CarRentalApp\CarRentalApp\testcarrental.cpp">
-      <sources>
-        <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\CarRentalApp\CarRentalApp\testcarrental.cpp" />
-      </sources>
-    </csc>
-</target>
-<target name="methodTest9">
-    <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\DeliveryApplication\DeliveryApplicatio\Program.cs">
-      <sources>
-        <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\DeliveryApplication\DeliveryApplication\Program.cs" />
-      </sources>
-    </csc>
-</target>
-<target name="methodTest10">
-    <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\InteriorDecorator\InteriorDecorator\Program.cs">
-      <sources>
-        <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\InteriorDecorator\InteriorDecorator\Program.cs" />
-      </sources>
-    </csc>
-</target>
+
+
 <target name="Propertynames">
 <script language="C#" prefix="util" >
         <code>
