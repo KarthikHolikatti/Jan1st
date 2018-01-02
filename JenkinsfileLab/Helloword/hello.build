@@ -2,8 +2,8 @@
 <project name="JenkinsfileLab" default="build">
   <property name="project.version" value="1.0" />
   <property name="project.config" value="release" />
-    <property name="fullpathoffile" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`\JenkinsfileLab.sln" />
-     <property name="src.dir" value="C:\Program Files (x86)\Jenkins\workspace\dotnetjenkinsfile2`" />
+    <property name="fullpathoffile" value="C:\Program Files (x86)\Jenkins\workspace\Jan1st\JenkinsfileLab.sln" />
+     <property name="src.dir" value="C:\Program Files (x86)\Jenkins\workspace\Jan1st" />
    <property name="build.dir" value="bin" />
    <property name="solution.config" value="debug" />
    <property name="build.server.dir" value="..." />
@@ -14,20 +14,20 @@
     <target name="build" depends="debug,init,methodTest7,methodTest6,methodTest5,methodTest4,methodTest3,methodTest2,methodTest1" description="compiles the source code">
     <property name="build.dir" value="${project::get-base-directory()}/${project::get-name() }_${project.version}${basedir.suffix}"/>
     <mkdir dir="${build.dir}" />
-    <csc target="exe" output="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs">
+    <csc target="exe" output="C:\Users\karthik.holikatti\Documents\visual studio 2015\Projects\GroovyHelloWorld\GroovyHelloWorld\Program.cs">
       <sources>
-        <include name="C:\Users\rajesh.krishnamurthy\Documents\Visual Studio 2015\Projects\HelloWorldApp\EmployeeLibrary\Employee.cs" />
+        <include name="C:\Users\karthik.holikatti\Documents\visual studio 2015\Projects\GroovyHelloWorld\GroovyHelloWorld\Program.cs" />
       </sources>
     </csc>
 	<mail
-    from="bkrajeshbk@gmail.com"
-    tolist="Rajesh.Krishnamurthy@oneadvanced.com;Karthik.Holikatti@oneadvanced.com"
+    from="karthik.hkt26@gmail.com"
+    tolist="Karthik.Holikatti@oneadvanced.com"
     subject="Sample Email"
     mailhost="smtp.gmail.com"
     mailport="587"
     ssl="true"
-    user="bkrajeshbk@gmail.com"
-    password=""
+    user="karthik.hkt26@gmail.com"
+    password="fakeomanniee511"
     message="Email from NAnt" />
     <echo>init build</echo>
    
