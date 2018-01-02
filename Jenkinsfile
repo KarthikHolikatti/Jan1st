@@ -1,12 +1,10 @@
 node{
- /* stages {
                
             stage ("Checkout SCM") {
                   
                steps{
                      git url:"https://github.com/Rajeshkrishnamurthy5/dotnet.git"
                      }
-here                   }*/
 	  
             stage("Build") {
 		    	   
@@ -52,7 +50,7 @@ here                   }*/
                     
    //stage-build
 				  
-    /*       stage("Test") {
+      stage("Test") {
                steps {
                   echo 'Testing..'
                  } 
@@ -63,6 +61,5 @@ here                   }*/
                  echo 'Deploying....'
                  }
               }//stage-deploy
-    }//stages
-*/
+
 }
