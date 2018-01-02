@@ -2,7 +2,7 @@ node{
 	pipeline{
 		agent any
             stage ("Checkout SCM") {
-                     git url:"https://github.com/Rajeshkrishnamurthy5/dotnet.git"
+                     git url:"https://github.com/KarthikHolikatti/Jan1st.git"
                      }
 	  
             stage("Build") {
@@ -30,10 +30,10 @@ node{
 
                     //send an email that the build has failed
                     mail body: "Project build error: ${err}" ,
-                      from: 'Rajesh.Krishnamurthy@oneadvanced.com',
-                      replyTo: 'Rajesh.Krishnamurthy@oneadvanced.com',
+                      from: 'Karthik.Holikatti@oneadvanced.com',
+                      replyTo: 'Karthik.Holikatti@oneadvanced.com',
                       subject: "failed",
-                      to: 'Rajesh.Krishnamurthy@oneadvanced.com'
+                      to: 'Karthik.Holikatti@oneadvanced.com'
 
                     throw err
             }//catch
