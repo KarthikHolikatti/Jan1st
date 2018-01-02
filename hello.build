@@ -121,6 +121,27 @@
    </code>
    </script>
 </target>
+<target name="methodTest8">
+    <csc target="exe" output="C:\Users\karthik.holikatti\Documents\Visual Studio 2015\Projects\JenkinTrials\Program.cs">
+      <sources>
+        <include name="C:\Users\karthik.holikatti\Documents\Visual Studio 2015\Projects\JenkinTrials\Program.cs" />
+      </sources>
+    </csc>
+</target>
+<target name="methodTest9">
+    <csc target="exe" output="C:\Users\karthik.holikatti\Documents\Visual Studio 2015\Projects\JenkinTrials\Program.cs">
+      <sources>
+        <include name="C:\Users\karthik.holikatti\Documents\Visual Studio 2015\Projects\JenkinTrials\Program.cs" />
+      </sources>
+    </csc>
+</target>
+<target name="methodTest10">
+    <csc target="exe" output="C:\Users\karthik.holikatti\Documents\Visual Studio 2015\Projects\JenkinTrials\Program.cs">
+      <sources>
+        <include name="C:\Users\karthik.holikatti\Documents\Visual Studio 2015\Projects\JenkinTrials\Program.cs" />
+      </sources>
+    </csc>
+</target>
 <target name="Propertynames">
 <script language="C#" prefix="util" >
         <code>
