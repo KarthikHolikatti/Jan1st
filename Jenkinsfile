@@ -17,14 +17,15 @@
                      }, b:{
                      echo 'Building..propertynames'
                      bat "nant Propertynames"
-                     },e:{
-			  try {
+                     }, e:{
+			  step{
+				  try {
           currentBuild.result = "SUCCESS"
 				  
                      echo 'Building..methods'
                      bat "nant init"
 				  
-	     }//try    
+	     }//try  
 			  catch (Exception err) {
                     currentBuild.result = "FAILURE"
 			                     bat "nant build"
@@ -40,12 +41,13 @@
                       to: 'Karthik.Holikatti@oneadvanced.com'
 
                     throw err
-            }//catch
+			  }//catch
+			  }
             finally {
                     def finalMessage ="defining final message"
                     echo finalMessage
 	    }      
-		     },g:{
+		     }, g:{
                      echo 'Building..methods'
                      bat "nant methodTest10"
                      } 
