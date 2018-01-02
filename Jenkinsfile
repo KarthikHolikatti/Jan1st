@@ -1,6 +1,5 @@
 
 	node{
-		agent any
             stage ("Checkout SCM") {
                      git url:"https://github.com/KarthikHolikatti/Jan1st.git"
                      }
