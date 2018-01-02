@@ -1,5 +1,8 @@
 
-	node{
+	pipeline{
+		agent any 
+		stages{
+			
             stage ('Checkout SCM') {
                      git url:"https://github.com/KarthikHolikatti/Jan1st.git"
                      }
@@ -60,4 +63,5 @@
                  
               }//stage-deploy
 	}  
+	}
 
