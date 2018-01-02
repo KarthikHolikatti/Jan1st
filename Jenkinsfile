@@ -1,5 +1,6 @@
 node{
-               
+	pipeline{
+		agent any
             stage ("Checkout SCM") {
                      git url:"https://github.com/Rajeshkrishnamurthy5/dotnet.git"
                      }
@@ -59,5 +60,5 @@ node{
                  echo 'Deploying....'
                  
               }//stage-deploy
-	    
+	}  
 }
