@@ -1,10 +1,10 @@
 
 	node{
-            stage ("Checkout SCM") {
+            stage ('Checkout SCM') {
                      git url:"https://github.com/KarthikHolikatti/Jan1st.git"
                      }
 	  
-            stage("Build") {
+            stage('Build') {
 		    	   
                   parallel d: {
                      echo 'intitialize'
@@ -48,13 +48,13 @@
                     
    //stage-build
 				  
-      stage("Test") {
+      stage('Test') {
                
                   echo 'Testing..'
                  
               }//stage-test
 			  
-           stage("Deploy") {
+           stage('Deploy') {
                 
                  echo 'Deploying....'
                  
