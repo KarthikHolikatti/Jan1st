@@ -4,8 +4,10 @@
 		stages{
 			
             stage ('Checkout SCM') {
+		    steps{
                      git url:"https://github.com/KarthikHolikatti/Jan1st.git"
                      }
+	    }
 	  
             stage('Build') {
 		    steps{
