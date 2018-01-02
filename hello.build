@@ -3,7 +3,7 @@
   <property name="project.version" value="1.0" />
   <property name="project.config" value="release" />
     <property name="fullpathoffile" value="C:\Program Files (x86)\Jenkins\workspace\Jan1st\JenkinsfileLab.sln" />
-     <property name="src.dir" value="C:\Program Files (x86)\Jenkins\workspace\dotnetJan1st" />
+     <property name="src.dir" value="C:\Program Files (x86)\Jenkins\workspace\Jan1st" />
    <property name="build.dir" value="bin" />
    <property name="solution.config" value="debug" />
    <property name="build.server.dir" value="..." />
