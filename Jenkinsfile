@@ -1,31 +1,25 @@
+node{
 
-	pipeline{
-		agent any 
-		stages{
-			
-            stage ('Checkout SCM') {
-		    steps{
+            stage ("Checkout SCM") {
                      git url:"https://github.com/KarthikHolikatti/Jan1st.git"
                      }
-	    }
 	  
-            stage('Build') {
-		    steps{
+            stage("Build") {
+		    	   
                   parallel d: {
                      echo 'intitialize'
                      bat "nant init"
                      }, b:{
                      echo 'Building..propertynames'
                      bat "nant Propertynames"
-                     }, e:{
-			  step{
-				  try {
+                     },e:{
+			  try {
           currentBuild.result = "SUCCESS"
 				  
                      echo 'Building..methods'
-                     bat "nant init"
+                     bat "nant t"
 				  
-	     }//try  
+	     }//try    
 			  catch (Exception err) {
                     currentBuild.result = "FAILURE"
 			                     bat "nant build"
@@ -34,38 +28,43 @@
                     //hipchatSend color: 'RED', message: errorMessage
 
                     //send an email that the build has failed
-                    mail body: "Project build error: ${err}" ,
-                      from: 'Karthik.Holikatti@oneadvanced.com',
-                      replyTo: 'Karthik.Holikatti@oneadvanced.com',
+                /*    mail body: "Project build error: ${err}" ,
+                      from: 'Rajesh.Krishnamurthy@oneadvanced.com',
+                      replyTo: 'Rajesh.Krishnamurthy@oneadvanced.com',
                       subject: "failed",
-                      to: 'Karthik.Holikatti@oneadvanced.com'
-
+                      to: 'Rajesh.Krishnamurthy@oneadvanced.com',
+				  mailport:25
+*/
+				  emailext (
+      subject: "STARTED:",
+      body: "body",
+      recipientProviders:  [[$class: 'DevelopersRecipientProvider']]
+    )
                     throw err
-			  }//catch
+            }//catch
             finally {
                     def finalMessage ="defining final message"
                     echo finalMessage
 	    }      
-			  }}, g:{
+		     },g:{
                      echo 'Building..methods'
                      bat "nant methodTest10"
                      } 
-		    }
-	    }
 	    }
                     
    //stage-build
 				  
-      stage('Test') {
-	      steps{
+      stage("Test") {
+               
                   echo 'Testing..'
-	      }
+                 
               }//stage-test
 			  
-           stage('Deploy') {
-		   steps{ 
+           stage("Deploy") {
+                
                  echo 'Deploying....'
-		   }
+                 
               }//stage-deploy
-	}  
+	
+}
 
