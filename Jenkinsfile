@@ -1,4 +1,4 @@
-node{
+
 	pipeline{
 		agent any
             stage ("Checkout SCM") {
@@ -61,4 +61,4 @@ node{
                  
               }//stage-deploy
 	}  
-}
+
