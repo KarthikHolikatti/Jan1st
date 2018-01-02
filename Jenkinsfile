@@ -42,7 +42,6 @@
 
                     throw err
 			  }//catch
-			  }
             finally {
                     def finalMessage ="defining final message"
                     echo finalMessage
@@ -52,6 +51,7 @@
                      bat "nant methodTest10"
                      } 
 		    }
+	    }
 	    }
                     
    //stage-build
