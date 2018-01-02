@@ -59,5 +59,5 @@ node{
                  echo 'Deploying....'
                  
               }//stage-deploy
-	    }
+	    
 }
