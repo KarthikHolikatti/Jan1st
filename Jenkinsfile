@@ -1,4 +1,4 @@
-node{
+/* node{
 
             stage ("Checkout SCM") {
                      git url:"https://github.com/KarthikHolikatti/Jan1st.git"
@@ -34,7 +34,7 @@ node{
                       subject: "failed",
                       to: 'Rajesh.Krishnamurthy@oneadvanced.com',
 				  mailport:25
-*/
+*//*
 				  emailext (
       subject: "STARTED:",
       body: "body",
@@ -66,5 +66,12 @@ node{
                  
               }//stage-deploy
 	
+}
+*/
+pipeline{
+	agent any
+	stage("init"){
+		bat "nant init"
+	}
 }
 
