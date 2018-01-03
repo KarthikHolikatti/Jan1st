@@ -162,7 +162,7 @@
 
 
   <target name="init">
-   <echo>init from Rajesh</echo>
+   <echo>init from Karthik</echo>
    <if test="${file::exists (madetodel)}"/>
     <delete file="madetodel"/>
    <if test="${not file::exists (madetodel)}"/>
