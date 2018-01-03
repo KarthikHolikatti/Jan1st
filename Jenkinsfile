@@ -73,7 +73,7 @@ pipeline{
 	stages{
 	stage("init"){
 		steps{
-			echo "hi from init"
+			echo 'hi from init'
 			bat "nant init"
 		}
 	}
