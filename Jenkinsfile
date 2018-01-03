@@ -70,8 +70,10 @@
 */
 pipeline{
 	agent any
+	stages{
 	stage("init"){
 		bat "nant init"
+	}
 	}
 }
 
