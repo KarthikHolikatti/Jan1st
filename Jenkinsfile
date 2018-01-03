@@ -72,7 +72,10 @@ pipeline{
 	agent any
 	stages{
 	stage("init"){
-		bat "nant init"
+		steps{
+			echo "hi from init"
+			bat "nant init"
+		}
 	}
 	}
 }
