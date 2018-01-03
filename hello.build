@@ -9,7 +9,7 @@
    <property name="build.server.dir" value="..." />
    <property name="3rd.party.lib.dir" value="..." />
     <property name="filename" value="JenkinsfileLab.sln" />
-    <property name="madetodel" value="madetodel" />
+    <property name="madetodel" value="C:\Users\karthik.holikatti\Desktop\New\madetodel" />
     
     <target name="build"  description="compiles the source code">
     from="karthik.hkt26@gmail.com"
