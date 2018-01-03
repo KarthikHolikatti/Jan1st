@@ -136,14 +136,14 @@
     </csc>
 </target>
 <target name="methodTest10">
-    <csc target="exe" output="C:\Users\karthik.holikatti\Documents\Visual Studio 2015\Projects\JenkinTrials\Program.cs">
+   <!-- <csc target="exe" output="C:\Users\karthik.holikatti\Documents\Visual Studio 2015\Projects\JenkinTrials\Program.cs">
       <sources>
         <include name="C:\Users\karthik.holikatti\Documents\Visual Studio 2015\Projects\JenkinTrials\Program.cs" />
       </sources>
-    </csc>
+    </csc> -->
 </target>
 <target name="Propertynames">
-<script language="C#" prefix="util" >
+<!-- <script language="C#" prefix="util" >
         <code>
             <![CDATA[
             public static void ScriptMain(Project project) 
@@ -157,13 +157,13 @@
             }
             ]]>
         </code>
-	</script>
+	</script> -->
 	</target>
 
 
   <target name="init">
    <echo>init</echo>
-    <if test="${file::exists (madetodel)}"/>
+   <!-- <if test="${file::exists (madetodel)}"/>
     <delete file="madetodel"/>
    <if test="${not file::exists (madetodel)}"/>
    <mkdir dir="madetodel" />
@@ -175,7 +175,7 @@
         WHENBuild configuration  is not supported!
     </otherwise>
 </choose>
-    <call target="${project.config}" />
+    <call target="${project.config}" /> -->
     
   </target>
   <if test="${not file::exists (fullpathoffile) or file::get-length (fullpathoffile) == 0}">
