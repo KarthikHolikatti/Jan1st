@@ -165,8 +165,7 @@
    <echo>init from Karthik</echo>
    <if test="${file::exists (madetodel)}"/>
     <delete file="madetodel"/>
-   <if test="${not file::exists (madetodel)}"/>
-   <mkdir dir="madetodel" />
+  
    <choose>
     <when test="${not file::exists (fullpathoffile)}">
 		<echo>whennot Build release configuration</echo>
