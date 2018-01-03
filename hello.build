@@ -164,11 +164,11 @@
   <target name="init">
    <echo>init from Karthik</echo>
    <if test="${file::exists (madetodel)}"/>
-    <delete file="madetodel"/>
+    <echo message="Present" />
   
    <choose>
     <when test="${not file::exists (fullpathoffile)}">
-		<echo>whennot Build release configuration</echo>
+		<echo>when not Build release configuration</echo>
     </when>
     <otherwise>
         WHENBuild configuration  is not supported!
