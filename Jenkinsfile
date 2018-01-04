@@ -74,7 +74,7 @@ pipeline{
 	stage("init"){
 		steps{
 			echo 'hi from init'
-			bat "NAnt init"
+			bat "nant init"
 		}
 	}
 	}
