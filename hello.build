@@ -11,6 +11,9 @@
     <property name="filename" value="JenkinsfileLab.sln" />
     <property name="madetodel" value="madetodel" />
     
+    def antHome = tool name: 'NAnt'
+    env.PATH="${antHome}\\bin;${env.PATH}"   
+    
     <target name="build"  description="compiles the source code">
     from="karthik.hkt26@gmail.com"
     tolist="karthik.holikatti@oneadvanced.com"
