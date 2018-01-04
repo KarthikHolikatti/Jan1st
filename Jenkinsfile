@@ -70,10 +70,10 @@
 */
 pipeline{
 	agent any
+	def antHome = tool name: 'NAnt'
+                env.PATH="${antHome}\\bin;${env.PATH}" 
 	stages{
-	stage("init"){
-		def antHome = tool name: 'NAnt'
-                env.PATH="${antHome}\\bin;${env.PATH}"  
+	stage("init"){ 
 		steps{
 			echo 'hi from init'
 			bat "nant init"
